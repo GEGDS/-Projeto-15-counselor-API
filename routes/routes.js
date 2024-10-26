@@ -13,7 +13,7 @@ router.get('/advice', async (req, res) => {
         const response = await axios.get('https://api.adviceslip.com/advice');
         const advice = response.data.slip.advice;
 
-        res.render('adivice', { advice });
+        res.render('advice', { advice });
     } catch (error) {
         console.error(error);
         res.status(500).send('Erro in seeking advice.');
